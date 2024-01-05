@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!-- <script src="./anime.min.js" defer></script> -->
+    <script src="./movies.js" defer></script>
+    <script src="./script.js" defer></script>
+    <title>Slutprojekt</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1><a href="#" id="restartPage"> MOVIES AND PERSONS </a></h1>
+        <form>
+          <input type="text" id="searchInput" placeholder="Enter a movie or person:" required/>
+          <input type="radio" id="movieRadio" name="search-type" value="movie" checked/>
+          <label for="movieRadio">Movie</label>
+          <input type="radio" id="personRadio" name="search-type" value="person"/>
+          <label for="personRadio">Person</label>
+          <button class="btn">Search</button>
+        </form>
+        <nav>
+          <button id="btnTopRated" value="topRated">Top Rated Movies</button>
+          <button id="btnPopular" value="popular">Most Popular Movies</button>
+        </nav>
+      </header>
+
+      <main>
+        <div id="mainmovie"></div>
+      </main>
+
+      <section>
+        <div id="moviePersonInfo" class="moviePersonContainer"></div>
+        <div id="popTopRated" class="pop_TopRatedContainer"></div>
+        <div id="errorContainer">
+          <h2 id="errorMessage"></h2>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footerContainer">
+          <div class="socialIcons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="footer-wrapper">
+            <div class="footerLeft">
+              <h3>Contact:</h3>
+                <p>Anne-Lie Ståhle</p>
+                <p>Ledeburgatan 5,</p>
+                <p>211 55 Malmö</p>
+            </div>
+            <div class="footermiddle">
+              <h3>Email me:</h3><br>
+              <p>anne-liestahle[at]gritacademy.se</p>
+            </div>
+            <div class="footerRight">
+              <p>
+                Copyright &copy; 2024<br />
+                Designad av Anne-Lie Ståhle<br />
+                Senast uppdaterad 4/01-2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
