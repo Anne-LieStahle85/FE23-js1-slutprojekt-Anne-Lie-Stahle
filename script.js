@@ -1,3 +1,4 @@
+//I denna filen har jag koden för sökning av person eller film
 const restart = document.querySelector("#restartPage");
 restart.addEventListener("click", (event)=>{
   event.preventDefault();
@@ -133,7 +134,6 @@ function createAndAppendElement(type, content, container) {
 function displayError(error) {
 
   const errorMessageEl = document.querySelector("#errorMessage");
-  // const errorContainer = document.querySelector("#errorContainer");
 
   let message;
 

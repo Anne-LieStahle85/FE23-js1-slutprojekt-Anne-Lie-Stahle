@@ -1,3 +1,5 @@
+//I denna filen har jag kod för mina knappar toprated
+//och popular. Även kod till mina filmer som visas direkt
 const btnTopRated = document.querySelector("#btnTopRated");
 const btnPopular = document.querySelector("#btnPopular");
 
@@ -53,7 +55,7 @@ async function fetchMovies(category) {
       }
     }
   } catch (error) {
-    throw error;
+      throw error;
   }
 }
 
@@ -85,7 +87,7 @@ async function mainmovies() {
     }
   } catch (error) {
     console.error(error);
-    displayError("Error fetching movies");
+    displayError(error);
   }
 }
 
@@ -121,13 +123,22 @@ function createAndAppendElement(type, content, container) {
   return element;
 }
 
-// function displayError(error){
-//   console.log(error)
-//   let message = "Something went wrong...Try again";
+function displayError(error){
+  console.log(error)
+  let message = "Something went wrong...Try again";
 
-//   const errorMessageEl = document.querySelector("#errorMessage");
-//   errorMessageEl.innerText = message;
+  const errorMessageEl = document.querySelector("#errorMessage");
+  errorMessageEl.innerText = message;
 
-//   const errorContainer = document.querySelector("#errorContainer");
-//   errorContainer.classList.remove("hide");
-// }
+  const errorContainer = document.querySelector("#errorContainer");
+  errorContainer.classList.remove("hide");
+}
+
+anime ({
+  targets: `#btnTopRated, #btnPopular`,
+  translateX: 350,
+  translateX: 0,
+  
+  rotate: '1turn',
+  loop: false,
+});
